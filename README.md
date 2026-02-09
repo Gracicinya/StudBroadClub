@@ -1,2 +1,3 @@
 # CampBroad
-Website For a Campus Broadcasting Thang
+Website For a Student Led Campus Broadcasting 
+
