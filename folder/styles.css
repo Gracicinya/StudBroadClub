@@ -486,6 +486,7 @@ button {
    JOIN US SECTION
    ================================================ */
 
+/* AI-assisted: Used VSCode GitHub Copilot to help with specificity */
 .join.us,
 [class*="join us"] {
   background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
@@ -520,6 +521,7 @@ button {
   margin-bottom: 1.5rem;
 }
 
+/* AI-assisted: Used VSCode GitHub Copilot to help with specificity */
 [class*="join us"] button {
   display: flex;
   margin-top: 1rem;
@@ -581,6 +583,7 @@ label {
   text-align: left;
 }
 
+/* AI-assisted: Used VSCode GitHub Copilot suggested this structure */
 input,
 select,
 textarea {
@@ -689,6 +692,7 @@ footer a:hover {
    RESPONSIVE DESIGN
    ================================================ */
 
+ /* AI-assisted: Used VSCode GitHub Copilot to help with this code */
 @media (max-width: 1024px) {
   main {
     padding: 1.5rem;
@@ -875,44 +879,4 @@ footer a:hover {
   .project {
     padding: 1.5rem;
   }
-}
-
-/* ================================================
-   UTILITY CLASSES
-   ================================================ */
-
-.text-center {
-  text-align: center;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.gap-2 {
-  gap: 2rem;
-}
-
-.rounded {
-  border-radius: 12px;
-}
-
-.shadow {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
-  color: white;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
