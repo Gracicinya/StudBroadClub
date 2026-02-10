@@ -24,34 +24,40 @@
     <main>
       <!-- Hero Section -->
       <section class="welcome">
-        <h2>Lights, camera, action!</h2>
-        <p>This is the Student Media Club, a place to create and produce live broadcasts, by the students for the students.</p>
-        <p>Join us to explore film, sports, broadcasting, podcasting, livestreaming, and more! 
-          No matter your level of experience, there is a place for you here.</p> 
-        <div class="buttons">
-          <button>Work with us!</button>
-          <button>Look at Our Work</button>
+        <div class="welcome-section">
+          <div class="welcome-text">
+            <h2>Lights, camera, action!</h2>
+            <p>This is the Student Media Club, a place to create and produce live broadcasts, by the students for the students.<br>
+            Join us to explore film, sports, broadcasting, podcasting, livestreaming, and more! <br>
+              No matter your level of experience, there is a place for you here.</p>
+          </div>
+          <div class="buttons">
+            <button><a href="recruitment.html">Work with us!</a></button>
+            <button><a href="work.html">Look at Our Work</a></button>
+          </div>
+          <div>
+            <span class="little_info">No experience needed</span>
+            <span class="little_info">50 active members</span>
+            <span class="little_info">10+ events per year</span>
+          </div>
         </div>
-        <div class="little_info">
-          <span>No experience needed</span>
-          <span>50 active members</span>
-          <span>10+ events per year</span>
+        <div class="image_container">
+            <img id="image" src="https://cdn.pixabay.com/photo/2016/06/13/19/49/sony-1455032_1280.jpg" alt="Video Camera Lens" />
+            <div class="caption">Make an impact in Pre-Production, Production, or Post-Production!</div>
         </div>
 
-        <!-- Image-->
-        <div class="image-container">
-        <img id="image" src="https://cdn.pixabay.com/photo/2016/06/13/19/49/sony-1455032_1280.jpg" alt="Video Camera Lens" />
-        </div> 
-        <div class="caption">Make an impact in Pre-Production, Production, or Post-Production!</div>
+
+
+        
       </section>
       
 
       <!-- What we Do Section -->
-      <section class="what we do">
+      <section class="what-we-do">
         <h2>What We Do</h2>
         <p>There are many ways to get involved in the Student Media Club. 
           Whether you're interested in film, sports, audio, or livestreaming, there's something for everyone!</p>
-          <ul class="offerings">
+          <ul class="cards">
             <li>
               <h3>Film & Video</h3>
               <p>We create short films, documentaries, and more. Learn how to use professional equipment and software.
@@ -74,11 +80,11 @@
       </section>
 
       <!-- Find Your Role Section -->
-      <section class="find your role">
+      <section class="find-your-role">
         <h2>Find Your Role</h2>
         <p>Are you interested in film, sports, audio, livestreaming or just want to flex? 
           There's something for you - no experience needed!</p>
-        <ul class="roles">
+        <ul class="cards">
             <li>
               <h3>Director/Producer</h3>
               <p>Oversee the creative vision and production process.</p>
@@ -133,40 +139,42 @@
         <p>Most of our members started with no prior experience. Our club welcomes beginners and provides training, 
           mentorship from experienced members, and a supportive environment to help you get started. 
           No prior experience is necessary to join our club, ask questions and learn as you go.</p>
-        <div class="look here">75%
+        <div class="look-here"><div class="note">75%</div>
           <p>of our members had no experience when they joined</p>
         </div>
-        <div class="look here">Free
-          <p>acess to all our equipment, software and training resources</p>
+        <div class="look-here"><div class="note">Free</div>
+          <p>access to all our equipment, software and training resources</p>
         </div>
-        <div class="look here">Supportive Community
+        <div class="look-here"><div class="note">Supportive Community</div>
           <p>Our members are always willing to help and support you as you learn and grow in your skills.</p>
       </section>
 
       <!-- What Do Our Members Say? -->
-      <section class="testimonials">
-        <h2>What Do Our Members Say?</h2>
-        <p>Hear from our members about their experiences in the club!</p>
-        <ul>
-          <li>
-            <h3>Alex, Director</h3>
-            <p>"Joining the Student Media Club was the best decision I made in college. 
-              I've learned so much about filmmaking and broadcasting, and I've had the opportunity to work on some amazing projects."</p>
-          </li>
-          <li>
-            <h3>Jamie, Audio Engineer</h3>
-            <p>"I had no experience and felt intimidated by audio before joining the club, but now I'm confident in my skills
-               and have even started my own podcast!"</p>
-          </li>
-          <li>
-            <h3>Taylor, Livestream Technician</h3>
-            <p>"The club has given me hands-on experience with livestreaming and has helped me develop skills
-               that I know will be valuable in my future career."</p>
-          </li>
-        </ul>
+      <section class="testimonial">
+        <div>
+          <h2>What Do Our Members Say?</h2>
+          <p>Hear from our members about their experiences in the club!</p>
+          <ul class="cards">
+            <li class="testimonial-content">
+              <h3 class="member-name">Alex, <i class="member-title">Director</i></h3>
+              <p class="testimonial-text">"Joining the Student Media Club was the best decision I made in college. 
+                I've learned so much about filmmaking and broadcasting, and I've had the opportunity to work on some amazing projects."</p>
+            </li>
+            <li class="testimonial-content">
+              <h3 class="member-name">Jamie, <i class="member-title">Audio Engineer</i></h3>
+              <p class="testimonial-text">"I had no experience and felt intimidated by audio before joining the club, but now I'm confident in my skills
+                and have even started my own podcast!"</p>
+            </li>
+            <li class="testimonial-content">
+              <h3 class="member-name">Taylor, <i class="member-title">Livestream Technician</i></h3>
+              <p class="testimonial-text">"The club has given me hands-on experience with livestreaming and has helped me develop skills
+                that I know will be valuable in my future career."</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <!-- Relevant Images -->
+      <!-- Gallery -->
       <section class="gallery">
         <div class="image-grid">
           <img src="https://cdn.pixabay.com/photo/2022/05/30/08/04/camera-7230748_1280.jpg" alt="Camera on Tripod" />
@@ -175,11 +183,13 @@
         </div>
       </section>
 
-      <section class="join us">
+      <section class="join-us">
         <h2>Ready to Join Us?</h2>
-        <p>If you're interested in joining the Student Media Club or want to learn more, feel free to reach out to us!
+        <div class="join-prompt">
+          <p>If you're interested in joining the Student Media Club or want to learn more, feel free to reach out to us!
            We're always looking for new members who are passionate about broadcasting, filmmaking and media production.</p>
-        <button class="buttons">Join the Club</button>
+          <button class="buttons"><a href="recruitment.html">Join the Club</a></button>
+        </div>
         <p>Questions? Contact us at studentmediaclub@campus.com or DM us at @campusstudentmediaclub.</p>
       </section>
 

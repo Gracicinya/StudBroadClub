@@ -1,0 +1,918 @@
+/* ================================================
+   GLOBAL STYLES & RESET
+   ================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* ================================================
+   HEADER & NAVIGATION
+   ================================================ */
+
+header {
+  background: #5a189a;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#logo a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+#logo a:hover {
+  opacity: 0.8;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* ================================================
+   MAIN CONTENT & LAYOUT
+   ================================================ */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2d1b4e;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  color: #232323;
+  line-height: 1.8;
+}
+
+/* ================================================
+   HERO / WELCOME SECTION
+   ================================================ */
+
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: left;
+  gap: 3rem;
+  width: 100%;
+  min-height: 70vh;
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+
+.welcome-text {
+  text-align: left;
+}
+
+.welcome-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.welcome-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;  
+}
+
+.buttons button,
+button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #7b2cbf;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.little_info {
+  display: inline-block;
+  background: #f0ebf8;
+  color: #7b2cbf;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.image_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+.image_container img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #7b2cbf;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ================================================
+   CARDS & GRIDS
+   ================================================ */
+
+.cards {
+  list-style: none;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.cards li {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: none;
+  border-top: 4px solid #7b2cbf;
+}
+
+.cards li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(123, 44, 191, 0.15);
+}
+
+.cards li h3 {
+  color: #7b2cbf;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cards li p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ================================================
+   WHAT WE DO SECTION
+   ================================================ */
+
+.what-we-do {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.cards ul.what-we-do {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.find-your-role {
+  text-align: center;
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.find-your-role .cards {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.join-us {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.what-we-do h2,
+.find-your-role h2,
+.join-us h2 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.what-we-do p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  width: 100%;
+}
+
+/* ================================================
+   FIND YOUR ROLE SECTION
+   ================================================ */
+
+.find.your.role,
+[class*="find your role"] {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.find.your.role h2,
+[class*="find your role"] h2 {
+  text-align: center;
+}
+
+.find.your.role p,
+[class*="find your role"] p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+[class*="find your role"] .cards li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+[class*="find your role"] .cards li h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ================================================
+   BEGINNER FRIENDLY SECTION
+   ================================================ */
+
+.beginner-friendly {
+  background: linear-gradient(150deg, #7b2cbf 0%, #5a189a 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.beginner-friendly h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.beginner-friendly p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+.look.here,
+[class*="look here"] {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  display: inline-block;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+}
+
+.look.here p,
+[class*="look here"] p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+.note {
+    font-size:xx-large;
+    font-weight: 700;
+}
+
+/* ================================================
+   TESTIMONIALS / MEMBER REVIEWS
+   ================================================ */
+
+.cards ul.testimonial {
+  list-style: none;
+  display: grid;
+  grid-column: auto;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.cards li.testimonial {
+  list-style: none;
+  padding: 2rem;
+  display: grid;
+  flex-direction: column;
+}
+
+.testimonial-content {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+
+.member-name {
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.member-title {
+  color: #7b2cbf;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+/* ================================================
+   GALLERY
+   ================================================ */
+
+.gallery {
+  margin: 3rem 0;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(123, 44, 191, 0.15);
+}
+
+/* ================================================
+   PROJECTS
+   ================================================ */
+
+.project {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.project h3 {
+  color: #7b2cbf;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.project .image-grid {
+  margin-top: 1.5rem;
+}
+
+/* ================================================
+   JOIN US SECTION
+   ================================================ */
+
+.join.us,
+[class*="join us"] {
+  background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.join.us h2,
+[class*="join us"] h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.join.us p,
+[class*="join us"] p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+[class*="join us"] button {
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* ================================================
+   RECRUITMENT/FORM PAGES
+   ================================================ */
+
+.recruitment {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.recruitment h2 {
+  color: #7b2cbf;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.recruitment p {
+  color: #666;
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.application.form,
+[class*="application form"] {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800;
+  margin: 2rem auto;
+}
+
+.application.form h3,
+[class*="application form"] h3 {
+  color: #7b2cbf;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #7b2cbf;
+  outline: none;
+}
+
+form button {
+  background: #7b2cbf;
+  padding: 0.8rem 2rem;
+}
+
+form button:hover {
+  background: #5a189a;
+}
+
+/* ================================================
+   CONTACT SECTION
+   ================================================ */
+
+.contact {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contact h3 {
+  color: #7b2cbf;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: #7b2cbf;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.7;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+footer {
+  background-color: #1a1a2e;
+  color: #a0aec0;
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+  border-top: 2px solid #7b2cbf;
+}
+
+footer .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+footer .footer-text {
+  color: #9d7fd8;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+footer p {
+  color: #a0aec0;
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #9d7fd8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #b799d1;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 1024px) {
+  main {
+    padding: 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .welcome-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .welcome-text h2 {
+    font-size: 2.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  header nav ul {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  main {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .welcome-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .welcome-text h2 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-grid img {
+    height: 200px;
+  }
+
+  .beginner-friendly,
+  .join.us,
+  [class*="join us"] {
+    padding: 2rem 1rem;
+  }
+
+  .look.here,
+  [class*="look here"] {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .little_info {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+
+  .application.form,
+  [class*="application form"] {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .contact {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  #logo {
+    font-size: 1.2rem;
+  }
+
+  header nav ul {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 0.8rem;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .cards li {
+    padding: 1.5rem;
+  }
+
+  .buttons button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .beginner-friendly,
+  .join.us,
+  [class*="join us"] {
+    padding: 1.5rem 1rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .project {
+    padding: 1.5rem;
+  }
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
