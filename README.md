@@ -23,3 +23,11 @@ AI was used for:
 debugging, 
 understanding, implementing, and checking for accessibility
 generating a plan on how to structure the site
+
+
+
+#unrelated
+noon is a weird time for submission it makes me want to cry. I never pay attention to noon (insert crying emoji)
+still trying to figure out this github thing too
+imagine my shock when i realised that i made a github account and got intimidated into never opening it until four years later
+yall bye
