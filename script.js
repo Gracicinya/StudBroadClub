@@ -1,6 +1,5 @@
 // AI was fundamental to the implementation of this JS code
 // My understanding how this code was used was also aided by AI
-// Even though I don't think I understand still
 
 /* ====================================================
   REQUEST 1: Hamburger Menu
