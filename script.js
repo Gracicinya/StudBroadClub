@@ -304,6 +304,7 @@ if (quoteText && quoteAuthor && refreshBtn) {
 
     // Anthropic Claude AI was used to format the code for inserting a proper quote
     // Before and whilst consulting Claude AI, none of what I tried to make this quote work was working
+    // Had to use dummy.json.com because all else that I tried failed
     try {
       const res = await fetch('https://dummyjson.com/quotes/random');
       if (!res.ok) throw new Error('Network response was not ok');
