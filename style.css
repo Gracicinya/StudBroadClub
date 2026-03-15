@@ -31,6 +31,7 @@ body {
   ================================================ */
 
 header {
+  position: sticky;
   background: #5a189a;
   color: white;
   padding: 2.5rem 2rem;
