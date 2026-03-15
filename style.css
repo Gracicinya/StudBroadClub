@@ -883,12 +883,7 @@ footer a:hover {
   }
 
   .hamburger {
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
+    display: flex;
   }
 
   
