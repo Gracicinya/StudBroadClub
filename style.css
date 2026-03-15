@@ -1,8 +1,8 @@
 /* AI was used, in part, to create this code. The code itself was made mostly by a human. 
 A human wrote this comment, but some comments were written by and/or with the help of AI*/
 /* ================================================
-   GLOBAL STYLES & RESET
-   ================================================ */
+  GLOBAL STYLES & RESET
+  ================================================ */
 
 * {
   margin: 0;
@@ -12,23 +12,28 @@ A human wrote this comment, but some comments were written by and/or with the he
 
 html {
   scroll-behavior: smooth;
+  width: auto;
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
+  width: 100%;
+  border-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ================================================
-   HEADER & NAVIGATION
-   ================================================ */
+  HEADER & NAVIGATION
+  ================================================ */
 
 header {
   background: #5a189a;
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +88,6 @@ header nav a:hover::after {
 }
 
 .hamburger { 
-  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -94,7 +98,7 @@ header nav a:hover::after {
 
 .bar {
   display: block;
-  width: 25px;
+  width: 30px;
   height: 3px;
   background-color: white;
   border-radius: 3px;
@@ -109,12 +113,17 @@ header nav a:hover::after {
   display: block;
 }
 
+.tab-button:hover {
+  transform: scale(1.05);
+  border-top: #b799d1;
+}
+
 /* ================================================
-   MAIN CONTENT & LAYOUT
-   ================================================ */
+  MAIN CONTENT & LAYOUT
+  ================================================ */
 
 main {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   width: 100%;
@@ -122,6 +131,7 @@ main {
   flex-direction: column;
   gap: 10px;
   flex: 1;
+  flex-grow: 1;
 }
 
 section {
@@ -153,13 +163,17 @@ p {
   line-height: 1.8;
 }
 
+a {
+  color: white;
+}
+
 /* ================================================
-   HERO / WELCOME SECTION
-   ================================================ */
+  HERO / WELCOME SECTION
+    ================================================ */
 
 .welcome {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr;
   align-items: center;
   justify-content: left;
   gap: 3rem;
@@ -188,12 +202,13 @@ p {
 
 .buttons {
   display: flex;
-  gap: 1rem;
+  row-gap: 1rem;
+  column-gap: 0.6rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
-.buttons button,
+.button,
 button {
   padding: 0.8rem 2rem;
   border: none;
@@ -204,10 +219,32 @@ button {
   background: #7b2cbf;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+
+  .buttons button a {
+  color: white;
+  text-decoration: none;
+  font-size: clamp(0.5rem, 1rem, 1.5rem);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button a:hover{
+  color: #b799d1;
+}
+
+.little_infos {
+  display: inline-block;
+  width: 100%;
 }
 
 .little_info {
-  display: inline-block;
+  /* display: inline-block; */
+  width: auto;
   background: #f0ebf8;
   color: #7b2cbf;
   padding: 0.5rem 1rem;
@@ -215,19 +252,20 @@ button {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 250px;
 }
 
 .image_container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .image_container img {
   width: 100%;
-  max-width: 520px;
+  max-width: 1000px;
   border-radius: 1.5rem;
   object-fit: cover;
 }
@@ -256,9 +294,23 @@ button {
   font-style: italic;
 }
 
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-top: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+}
+
+.tab-content {
+  width: 100%;
+}
+
 /* ================================================
-   CARDS & GRIDS
-   ================================================ */
+  CARDS & GRIDS
+  ================================================ */
 
 .cards {
   list-style: none;
@@ -296,87 +348,42 @@ button {
 }
 
 /* ================================================
-   WHAT WE DO SECTION
-   ================================================ */
+  WHAT WE DO - FIND YOUR ROLE
+  ================================================ */
 
 .what-we-do {
   text-align: center;
   padding: 2rem 0;
 }
 
-.cards ul.what-we-do {
-  list-style: none;
+.find-your-role {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.what-we-do .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.find-your-role {
-  text-align: center;
-  padding: 2rem 0;
-  flex: 1;
-}
-
 .find-your-role .cards {
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.join-us {
-  text-align: center;
-  padding: 2rem 0;
-}
-
+/* ================================================
+  W-W-D - F-Y-R - B-F SECTION
+  ================================================ */
 .what-we-do h2,
-.find-your-role h2,
-.join-us h2 {
+.find-your-role h2 {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-.what-we-do p {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  font-size: 1.05rem;
-  width: 100%;
-}
 
 /* ================================================
-   FIND YOUR ROLE SECTION
-   ================================================ */
-
-.find.your.role,
-[class*="find your role"] {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.find.your.role h2,
-[class*="find your role"] h2 {
-  text-align: center;
-}
-
-.find.your.role p,
-[class*="find your role"] p {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 2rem;
-}
-
-[class*="find your role"] .cards li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-[class*="find your role"] .cards li h3 {
-  margin-bottom: 0.5rem;
-}
-
-/* ================================================
-   BEGINNER FRIENDLY SECTION
-   ================================================ */
+  BEGINNER FRIENDLY SECTION
+  ================================================ */
 
 .beginner-friendly {
   background: linear-gradient(150deg, #7b2cbf 0%, #5a189a 100%);
@@ -400,8 +407,7 @@ button {
   font-size: 1.05rem;
 }
 
-.look.here,
-[class*="look here"] {
+.look-here {
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 12px;
@@ -411,7 +417,7 @@ button {
   backdrop-filter: blur(10px);
 }
 
-.look.here p,
+.look-here p,
 [class*="look here"] p {
   color: rgba(255, 255, 255, 0.9);
   margin: 0.5rem 0 0 0;
@@ -424,17 +430,26 @@ button {
 }
 
 /* ================================================
-   TESTIMONIALS / MEMBER REVIEWS
-   ================================================ */
+  TESTIMONIALS / MEMBER REVIEWS
+  ================================================ */
 
-.cards ul.testimonial {
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0ebf8;
+  border-radius: 1.5rem;
+}
+
+.cards ul.testimonials {
   list-style: none;
   display: grid;
   grid-column: auto;
   grid-template-rows: repeat(3, 1fr);
 }
 
-.cards li.testimonial {
+.cards li.testimonials {
   list-style: none;
   padding: 2rem;
   display: grid;
@@ -454,7 +469,6 @@ button {
   margin-bottom: 1.5rem;
 }
 
-
 .member-name {
   font-weight: 700;
   color: #333;
@@ -468,8 +482,8 @@ button {
 }
 
 /* ================================================
-   GALLERY
-   ================================================ */
+  GALLERY
+  ================================================ */
 
 .gallery {
   margin: 3rem 0;
@@ -501,8 +515,8 @@ button {
 }
 
 /* ================================================
-   PROJECTS
-   ================================================ */
+  PROJECTS
+  ================================================ */
 
 .project {
   margin: 2rem 0;
@@ -528,11 +542,10 @@ button {
 }
 
 /* ================================================
-   JOIN US SECTION
-   ================================================ */
+  JOIN US SECTION
+  ================================================ */
 
-.join.us,
-[class*="join us"] {
+.join-us{
   background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
   color: white;
   padding: 3rem 2rem;
@@ -540,39 +553,34 @@ button {
   text-align: center;
   margin: 2rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .join-prompt {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.join.us h2,
-[class*="join us"] h2 {
+.join-us h2 {
   color: white;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.join.us p,
-[class*="join us"] p {
+.join-us p {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.5rem;
 }
 
-[class*="join us"] button {
-  display: flex;
+.join-us button {
   margin-top: 1rem;
 }
 
 /* ================================================
-   RECRUITMENT/FORM PAGES
-   ================================================ */
+  RECRUITMENT/FORM PAGES
+  ================================================ */
 
 .recruitment {
   text-align: center;
@@ -593,8 +601,46 @@ button {
   line-height: 1.8;
 }
 
-.application.form,
-[class*="application form"] {
+.roles-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.role-filter-btns {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 0.1rem;
+  width: 100%;
+  max-width: 760px;
+}
+
+.filter-btn {
+  width: auto;
+  max-width: 130px;
+  font-size: small;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);
+}
+
+.available-roles .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+
+.role-badge {
+  font-style: italic;
+  color: #7b2cbf;
+  font-weight: 600;
+}
+
+.application-form {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -604,8 +650,7 @@ button {
   margin: 2rem auto;
 }
 
-.application.form h3,
-[class*="application form"] h3 {
+.application-form h3 {
   color: #7b2cbf;
   font-size: 1.5rem;
   text-align: center;
@@ -653,10 +698,21 @@ form button {
 form button:hover {
   background: #5a189a;
 }
+.error-field {
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+}
+
+.error-message {
+  display: block;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
 
 /* ================================================
-   CONTACT SECTION
-   ================================================ */
+  CONTACT SECTION
+  ================================================ */
 
 .contact {
   background: white;
@@ -664,6 +720,7 @@ form button:hover {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
+  width: 100%;
   max-width: 600px;
   margin: 2rem auto;
 }
@@ -690,8 +747,8 @@ form button:hover {
 }
 
 /* ================================================
-   FOOTER
-   ================================================ */
+  FOOTER
+  ================================================ */
 
 footer {
   background-color: #1a1a2e;
@@ -699,7 +756,7 @@ footer {
   padding: 2rem;
   text-align: center;
   margin-top: auto;
-  border-top: 2px solid #7b2cbf;
+  border-top: auto;
 }
 
 footer .logo {
@@ -731,8 +788,8 @@ footer a:hover {
 }
 
 /* ================================================
-   BACK TO TOP BUTTON
-   ================================================ */
+  BACK TO TOP BUTTON
+  ================================================ */
 
 #back-to-top {
   position: fixed;
@@ -740,10 +797,8 @@ footer a:hover {
   right: 2rem;
   background: #7b2cbf;
   color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   font-size: 1.3rem;
   cursor: pointer;
   opacity: 0;
@@ -758,14 +813,19 @@ footer a:hover {
 }
 
 #back-to-top:hover {
-  background: #5a189a;
+    transform: scale(1.02);
 }
 
 /* ================================================
-   RESPONSIVE DESIGN
+    RESPONSIVE DESIGN
    ================================================ */
 
- /* AI-assisted: Used VSCode GitHub Copilot to help with this code */
+/* AI-assisted: Used VSCode GitHub Copilot to help with
+  how to format responsive design for this code */
+
+/* ================================================
+  Desktop & Large Screens
+   ================================================ */
 
 @media (max-width: 1024px) {
   main {
@@ -791,12 +851,16 @@ footer a:hover {
   }
 }
 
+/* ================================================
+  Tablet & Mobile Styles
+   ================================================ */
+
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   header nav {
@@ -811,14 +875,61 @@ footer a:hover {
     justify-content: center;
   }
 
+  header nav li {
+    background-color: #7b2cbf;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  
+  .nav-menu {
+    display: none;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   main {
     padding: 1rem;
     gap: 2rem;
   }
 
+  .welcome {
+    display: grid;;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .welcome-section {
+    order: 2;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .image_container {
+    order: 1;
+  }
+
+  #image {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .welcome-text h2 {
@@ -826,8 +937,8 @@ footer a:hover {
   }
 
   .buttons {
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .buttons button {
@@ -842,13 +953,8 @@ footer a:hover {
     font-size: 1.5rem;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
   .image-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
 
@@ -857,25 +963,27 @@ footer a:hover {
   }
 
   .beginner-friendly,
-  .join.us,
-  [class*="join us"] {
+  .join-us{
     padding: 2rem 1rem;
   }
 
-  .look.here,
-  [class*="look here"] {
+  .look-here {
     display: block;
     margin: 1rem 0;
   }
 
+  .little_infos {
+    display: flex;
+    flex-direction: row;
+  }
+
   .little_info {
-    display: block;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0rem;
     margin-right: 0;
   }
 
-  .application.form,
-  [class*="application form"] {
+  .application-form {
     padding: 1.5rem;
     margin: 1.5rem auto;
   }
@@ -888,22 +996,15 @@ footer a:hover {
     padding: 1.5rem;
   }
 
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  .nav-menu.open {
-    display: flex;
+  .cards .ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ================================================
+    Phones & Small Screens
+   ================================================ */
 
 @media (max-width: 480px) {
   header {
@@ -930,11 +1031,19 @@ footer a:hover {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   h3 {
     font-size: 1.1rem;
+  }
+
+  .welcome {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    gap: 0.5rem;
   }
 
   .welcome-text h2 {
@@ -949,19 +1058,70 @@ footer a:hover {
     padding: 1.5rem;
   }
 
+  .buttons {
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+
   .buttons button {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .little_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .little_info {
+    width: 100%;
+    max-width: auto;
+  }
+
+  .quote-section {
+    margin-top: 0.5rem;
   }
 
   .beginner-friendly,
-  .join.us,
-  [class*="join us"] {
+  .join-us{
     padding: 1.5rem 1rem;
+  }
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .tab-button {
+    padding: 0.5rem 2rem;
+  }
+
+  .what-we-do .cards, 
+  .find-your-role .cards, 
+  .beginner-friendly {
+    display: flex;
+    flex-direction: column;
   }
 
   .image-grid {
     grid-template-columns: 1fr;
+  }
+
+  .role-cards {
+    width: 100%;
+    align-items: center;
+  }
+
+  .role-filter-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 0.25rem;
+    font-weight: 100;
   }
 
   form {
